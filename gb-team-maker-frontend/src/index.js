@@ -1,5 +1,29 @@
-const BACKEND_URL = 'localhost:3000'
+document
 
-fetch(`${BACKEND_URL}/test`)
-    .then(resp => resp.json())
-    .then(parseResp => console.log(parseResp))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMcontentloaded", () => {
+
+})

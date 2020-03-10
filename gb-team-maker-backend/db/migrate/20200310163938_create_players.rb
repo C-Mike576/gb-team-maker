@@ -6,8 +6,6 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
       t.string :position
       t.string :card_front
       t.string :card_back
-
-      t.timestamps
     end
   end
 end

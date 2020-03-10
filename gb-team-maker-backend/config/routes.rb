@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  resources :players
-  get '/test', to: 'application#test'
+  resources :players, only: [:show, :index]
 end
