@@ -11,17 +11,18 @@ class Player {
         this.element.className = "player-info"    
 
         this.element.addEventListener("click", this.handleFlip.bind(this))
-
+        this.card_front_display = document.querySelector(".player-card-front")
+        this.card_back_display = document.querySelector(".player-card-back")
     }
 
-    handleFlip(e){
+    handleFlip(){
         this.fliped = !this.fliped
         if (this.fliped) {
-            this.card_front.display = "none"
-            this.card_back.display = "block"
+            // this.card_front_display.display = "none"
+            this.card_back_display.display = "block"
         } else {
-            this.card_front.display = "block"
-            this.card_back.display = "none"
+            // this.card_front_display.display = "block"
+            this.card_back_display.display = "none"
         }
     }
     render(){
