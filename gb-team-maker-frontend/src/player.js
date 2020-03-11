@@ -8,8 +8,7 @@ class Player {
         this.card_back = card_back
         this.fliped = false
         this.element = document.createElement('div')
-        this.element.className = "player-info"
-        this.element.id = this.id
+        this.element.className = "player-info"    
 
         this.element.addEventListener("click", this.handleFlip.bind(this))
 
@@ -33,5 +32,6 @@ class Player {
         </br>
         <button class="veiw-back">View Back of card</button>
         `
+        return this.element
     }
 }
