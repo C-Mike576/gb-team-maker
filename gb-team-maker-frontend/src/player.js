@@ -9,23 +9,20 @@ class Player {
         this.fliped = false
         this.element = document.createElement('div')
         this.element.className = "player-info"    
-
-        this.element.addEventListener("click", this.handleFlip.bind(this))
+    }
+    handleFlip() {
         this.card_front_display = document.querySelector(".player-card-front")
         this.card_back_display = document.querySelector(".player-card-back")
-    }
-
-    handleFlip(){
         this.fliped = !this.fliped
         if (this.fliped) {
-            // this.card_front_display.display = "none"
+            this.card_front_display.display = "none"
             this.card_back_display.display = "block"
         } else {
-            // this.card_front_display.display = "block"
+            this.card_front_display.display = "block"
             this.card_back_display.display = "none"
         }
     }
-    render(){
+    render() {
         this.element.innerHTML = `
         <h3>${this.name}<h3>
         <img src="${this.card_front}" class="player-card-front" style="display:block;"/>

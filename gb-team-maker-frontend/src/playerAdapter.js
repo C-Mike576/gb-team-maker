@@ -2,7 +2,6 @@ class PlayerAdapter{
     constructor(baseURL) {
         this.baseURL = baseURL
         this.teamContainer = document.querySelector("#team-container")
-        this.teamContainer.addEventListener('click', this.handleFlip)
     }
 
     fetchPlayers(){
@@ -16,8 +15,8 @@ class PlayerAdapter{
             player.position = playerObj.position
             player.card_front = playerObj.card_front
             player.card_back = playerObj.card_back
-            this.teamContainer.appendChild(player.render())
-        }))
+            this.teamContainer.appendChild(player.render()) 
+        }))   
     }
 }
 
