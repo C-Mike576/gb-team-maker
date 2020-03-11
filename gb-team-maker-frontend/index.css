@@ -4,6 +4,12 @@
     width: auto;
 }
 
+.player-card-back {
+    justify-self: center;
+    height: 24rem;
+    width: auto;
+}
+
 .player-info {
     text-align: center;
     display: inline-grid;

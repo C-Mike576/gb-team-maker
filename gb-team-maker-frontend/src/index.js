@@ -17,8 +17,9 @@ function playerToDom(playerObj) {
     playerElement.innerHTML =
         `
         <h3>${playerObj.attributes.name}<h3>
-        <img src="${playerObj.attributes.card_front}" class="player-card-front" />
-     </br>
+        <img src="${playerObj.attributes.card_front}" class="player-card-front" style="display:block;"/>
+        <img src="${playerObj.attributes.card_back}" class="player-card-back" style="display:block;"/>
+        </br>
         <button class="veiw-back">View Back of card</button>
     `
     playerCollection.appendChild(playerElement)
