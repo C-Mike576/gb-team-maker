@@ -16,6 +16,11 @@ class PlayerAdapter{
             player.card_front = playerObj.card_front
             player.card_back = playerObj.card_back
             this.teamContainer.appendChild(player.render()) 
+            let addToTeam = document.getElementById(`add-${player.id}`)
+            addToTeam.addEventListener('click', () => {
+                console.log(`button clicked! ${player.id}`);
+                
+            })
         }))   
     }
     

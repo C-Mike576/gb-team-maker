@@ -29,12 +29,12 @@ class Player {
     render() {
         this.element.innerHTML = `
         <h3>${this.name}</h3>
+        <p>(${this.position})</p>
         <img src="${this.card_front}" class="player-card-front" id="f${this.id}" style="display:block;"/>
         <img src="${this.card_back}" class="player-card-back" id="b${this.id}" style="display:none;"/>
         <br>
-        <button class="add-to-team" onclick="event.stopPropagation()">Add player to team</button>
+        <button id="add-${this.id}" onclick="event.stopPropagation()">Add player to team</button>
         ` 
-        
         return this.element
     }
 }
