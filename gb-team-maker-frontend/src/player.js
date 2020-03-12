@@ -31,6 +31,8 @@ class Player {
         <h3>${this.name}</h3>
         <img src="${this.card_front}" class="player-card-front" id="f${this.id}" style="display:block;"/>
         <img src="${this.card_back}" class="player-card-back" id="b${this.id}" style="display:none;"/>
+        <br>
+        <button class="add-to-team" onclick="event.stopPropagation()">Add player to team</button>
         ` 
         
         return this.element
