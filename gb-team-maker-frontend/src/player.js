@@ -8,28 +8,31 @@ class Player {
         this.card_back = card_back
         this.fliped = false
         this.element = document.createElement('div')
-        this.element.className = "player-info"    
+        this.element.className = "player-info" 
+
+        this.element.addEventListener('click', this.handleFlip.bind(this))
     }
+
     handleFlip() {
-        this.card_front_display = document.querySelector(".player-card-front")
-        this.card_back_display = document.querySelector(".player-card-back")
+        let front = document.getElementById(`f${this.id}`)
+        let back = document.getElementById(`b${this.id}`)
         this.fliped = !this.fliped
         if (this.fliped) {
-            this.card_front_display.display = "none"
-            this.card_back_display.display = "block"
+            front.style.display = "none"
+            back.style.display = "block"
         } else {
-            this.card_front_display.display = "block"
-            this.card_back_display.display = "none"
+            front.style.display = "block"
+            back.style.display = "none"
         }
     }
+
     render() {
         this.element.innerHTML = `
-        <h3>${this.name}<h3>
-        <img src="${this.card_front}" class="player-card-front" style="display:block;"/>
-        <img src="${this.card_back}" class="player-card-back" style="display:none;"/>
-        </br>
-        <button class="veiw-back">View Back of card</button>
-        `
+        <h3>${this.name}</h3>
+        <img src="${this.card_front}" class="player-card-front" id="f${this.id}" style="display:block;"/>
+        <img src="${this.card_back}" class="player-card-back" id="b${this.id}" style="display:none;"/>
+        ` 
+        
         return this.element
     }
 }

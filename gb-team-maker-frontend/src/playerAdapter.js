@@ -1,7 +1,7 @@
 class PlayerAdapter{
     constructor(baseURL) {
         this.baseURL = baseURL
-        this.teamContainer = document.querySelector("#team-container")
+        this.teamContainer = document.getElementById("team-container")
     }
 
     fetchPlayers(){
@@ -18,6 +18,7 @@ class PlayerAdapter{
             this.teamContainer.appendChild(player.render()) 
         }))   
     }
+    
 }
 
 document.addEventListener("DOMContentLoaded", () => {
